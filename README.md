@@ -7,6 +7,11 @@
 4. Run `pip install -r requirements.txt`.
 5. Run `streamlit run app.py`.
 
+## Deployment notes
+- Use `opencv-python-headless`, not `opencv-python`, on headless Linux hosting.
+- Do not install both OpenCV wheel variants in the same environment.
+- If the error persists, remove `opencv-python` from any additional requirements file and rebuild/redeploy the environment.
+
 ## What it does
 - Uploads a YOLO object-detection dataset ZIP containing `data.yaml`/`data.yml`.
 - Trains an Ultralytics YOLO model and exposes `best.pt`/`last.pt` weights.
